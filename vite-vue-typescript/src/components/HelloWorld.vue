@@ -1,15 +1,24 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import Ably from 'ably/promises'
 
 defineProps<{ msg: string }>()
 
 const count = ref(0)
+
+const client = new Ably.Realtime.Promise({ authUrl: '/api/ably/token/' });
+
+const state = ref('');
+client.connection.on((stateChange:Ably.Types.ConnectionStateChange) => {
+  state.value = stateChange.current;
+});
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
 
   <div class="card">
+    <p><span>Realtime Connection Status: {{ state }}</span></p>
     <button type="button" @click="count++">count is {{ count }}</button>
     <p>
       Edit

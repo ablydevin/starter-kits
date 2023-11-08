@@ -1,8 +1,17 @@
 <script lang="ts">
+  import Ably from 'ably/promises'
   import svelteLogo from './assets/svelte.svg'
   import viteLogo from '/vite.svg'
   import Counter from './lib/Counter.svelte'
+
+  const client = new Ably.Realtime.Promise({ authUrl: '/api/ably/token/' });
+
+  let state = '';
+  client.connection.on((stateChange:Ably.Types.ConnectionStateChange) => {
+    state = stateChange.current;
+  });
 </script>
+
 
 <main>
   <div>
@@ -12,10 +21,14 @@
     <a href="https://svelte.dev" target="_blank" rel="noreferrer">
       <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
     </a>
+    <a href="https://ably.com" target="_blank" rel="noreferrer">
+      <img src={svelteLogo} class="logo ably" alt="Ably Logo" />
+    </a>
   </div>
-  <h1>Vite + Svelte</h1>
+  <h1>Vite + Svelte + Ably</h1>
 
   <div class="card">
+    <p><span>Realtime Connection Status: {state}</span></p>
     <Counter />
   </div>
 
