@@ -2,6 +2,7 @@
   import Ably from 'ably/promises'
   import svelteLogo from './assets/svelte.svg'
   import viteLogo from '/vite.svg'
+  import ablyLogo from './assets/ably-motif-col-rgb.svg'
   import Counter from './lib/Counter.svelte'
 
   const client = new Ably.Realtime.Promise({ authUrl: '/api/ably/token/' });
@@ -22,7 +23,7 @@
       <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
     </a>
     <a href="https://ably.com" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo ably" alt="Ably Logo" />
+      <img src={ablyLogo} class="logo ably" alt="Ably Logo" />
     </a>
   </div>
   <h1>Vite + Svelte + Ably</h1>

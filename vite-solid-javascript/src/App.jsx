@@ -2,6 +2,7 @@ import { createSignal } from 'solid-js'
 import Ably from 'ably/promises'
 import solidLogo from './assets/solid.svg'
 import viteLogo from '/vite.svg'
+import ablyLogo from './assets/ably-motif-col-rgb.svg'
 import './App.css'
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
           <img src={solidLogo} class="logo solid" alt="Solid logo" />
         </a>
         <a href="https://ably.com" target="_blank">
-          <img src={solidLogo} className="logo ably" alt="Ably logo" />
+          <img src={ablyLogo} className="logo ably" alt="Ably logo" />
         </a>
       </div>
       <h1>Vite + Solid + Ably</h1>

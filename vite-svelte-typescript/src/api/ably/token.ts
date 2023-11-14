@@ -1,5 +1,5 @@
 import Ably from "ably/promises";
-import { Request, Response } from 'express';
+import type { Request, Response } from 'express';
 
 export const GET = async (req:Request, res:Response) => {
 
@@ -8,9 +8,11 @@ export const GET = async (req:Request, res:Response) => {
  // to receive a token before fulfilling the token request 
  // if (requesting_user.isAuthenticated) {
 
+    const clientId = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+
     const client = new Ably.Rest(import.meta.env.VITE_ABLY_API_KEY);
     const tokenRequestData = await client.auth.createTokenRequest({
-      clientId: 'Random Client ID',
+      clientId: clientId,
     });
     console.log(`Request: ${JSON.stringify(tokenRequestData)}`);
     return res.json(tokenRequestData);

@@ -11,7 +11,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
     <a href="https://ably.com/" target="_blank">
-      <img src="./assets/vue.svg" class="logo ably" alt="Ably logo" />
+      <img src="./assets/ably-motif-col-rgb.svg" class="logo ably" alt="Ably logo" />
     </a>
   </div>
   <HelloWorld msg="Vite + Vue + Ably" />

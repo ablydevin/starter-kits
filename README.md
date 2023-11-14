@@ -2,11 +2,11 @@
 
 This repository contains Ably Starter Kit applications for common programming languages and frameworks.  The Starter Kits demonstrate how to create a new Ably client, authenticating the client by using a token generation API endpoint.
 
-## Start Kits
+## Starter Kits
 
 - [x] Next.js (JavaScript)
 - [x] Next.js (TypeScript)
-- [ ] Nuxt (Javascript)
+- [ ] Nuxt (JavaScript)
 - [x] React (Vite, JavaScript)
 - [x] React (Vite, TypeScript)
 - [x] Solid (Vite, JavaScript)
@@ -17,6 +17,12 @@ This repository contains Ably Starter Kit applications for common programming la
 - [x] Vue (Vite, TypeScript)
 - [ ] Vanilla (Vite, JavaScript)
 - [ ] Vanilla (Vite, TypeScript)
+- [ ] Vanilla (Express, JavaScript)
+- [ ] Vanilla (Express, TypeScript)
+- [ ] Remix Minimal (Vite, JavaScript)
+- [ ] Remix Express (Vite, JavaScript)
+- [ ] RedwoodJS (Vite, JavaScript)
+- [ ] RedwoodJS (Vite, TypeScript)
 
 ## Installation
 

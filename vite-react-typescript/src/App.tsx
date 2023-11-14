@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useConnectionStateListener } from 'ably/react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import ablyLogo from './assets/ably-motif-col-rgb.svg'
 import './App.css'
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
         <a href="https://ably.com" target="_blank">
-          <img src={reactLogo} className="logo ably" alt="Ably logo" />
+          <img src={ablyLogo} className="logo ably" alt="Ably logo" />
         </a>
       </div>
       <h1>Vite + React + Ably</h1>
