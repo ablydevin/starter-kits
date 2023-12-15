@@ -15,14 +15,17 @@ This repository contains Ably Starter Kit applications for common programming la
 - [x] Svelte (Vite, TypeScript)
 - [x] Vue (Vite, JavaScript)
 - [x] Vue (Vite, TypeScript)
-- [ ] Vanilla (Vite, JavaScript)
-- [ ] Vanilla (Vite, TypeScript)
-- [ ] Vanilla (Express, JavaScript)
-- [ ] Vanilla (Express, TypeScript)
-- [ ] Remix Minimal (Vite, JavaScript)
-- [ ] Remix Express (Vite, JavaScript)
+- [x] Vanilla (Vite, JavaScript)
+- [x] Vanilla (Vite, TypeScript)
+- [x] Vanilla (Express, JavaScript)
+- [x] Vanilla (Express, TypeScript)
+- [ ] Remix (JavaScript)
+- [ ] Remix (Typescript)
 - [ ] RedwoodJS (Vite, JavaScript)
 - [ ] RedwoodJS (Vite, TypeScript)
+- [x] Astro (Javascript)
+- [ ] Refine (Javascript)
+
 
 ## Installation
 
