@@ -33,6 +33,6 @@ We recommend using `giget` to copy the template of your choice to your local sys
 
 ```
 # Clone /[STARTER_KIT_DIR] directory from the main branch to the myProject directory
-npx giget@latest gh:ablydevin/[STARTER_KIT_DIR] myProject
+npx giget@latest gh:ablydevin/[starter-kits/STARTER_KIT_DIR] myProject
 ```
 
