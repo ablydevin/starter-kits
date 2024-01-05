@@ -1,11 +1,11 @@
 import { defineConfig } from "vite";
 import vue from '@vitejs/plugin-vue'
-import { pluginAPI } from "vite-plugin-api";
+import { pluginAPIRoutes } from "vite-plugin-api-routes";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
-    pluginAPI({
+    pluginAPIRoutes({
       // Configuration options go here
     }),
   ],

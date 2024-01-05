@@ -9,11 +9,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^5.0.9"
+    "vite": "^4.5.1",
+    "vite-plugin-api-routes": "^1.1.0-beta"
   },
   "dependencies": {
     "ably": "^1.2.48",
-    "express": "^4.18.2",
-    "vite-plugin-rest-api": "^1.0.6"
+    "express": "^4.18.2"
   }
 }

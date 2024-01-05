@@ -1,15 +1,19 @@
 <script>
-  import Ably from 'ably/promises'
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import ablyLogo from './assets/ably-motif-col-rgb.svg'
-  import Counter from './lib/Counter.svelte'
+  import { onMount } from "svelte";
+  import Ably from "ably/promises";
+  import svelteLogo from "./assets/svelte.svg";
+  import viteLogo from "/vite.svg";
+  import ablyLogo from "./assets/ably-motif-col-rgb.svg";
+  import Counter from "./lib/Counter.svelte";
 
-  const client = new Ably.Realtime.Promise({ authUrl: '/api/ably/token/' });
+  let state = "";
 
-  let state = '';
-  client.connection.on((stateChange) => {
-    state = stateChange.current;
+  onMount(async () => {
+    const client = new Ably.Realtime.Promise({ authUrl: "/api/ably/token/" });
+
+    client.connection.on((stateChange) => {
+      state = stateChange.current;
+    });
   });
 </script>
 
@@ -33,7 +37,11 @@
   </div>
 
   <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
+    Check out <a
+      href="https://github.com/sveltejs/kit#readme"
+      target="_blank"
+      rel="noreferrer">SvelteKit</a
+    >, the official Svelte app framework powered by Vite!
   </p>
 
   <p class="read-the-docs">

@@ -1,6 +1,6 @@
 import Ably from "ably/promises";
 
-export const GET = async (req, res) => {
+export const GET = async (req, res, next) => {
 
  // Your application should perform some type of user 
  // authorization to validate that the user is allowed 

@@ -1,11 +1,11 @@
 import { defineConfig } from "vite";
 import solid from "vite-plugin-solid";
-import { pluginRestAPI } from "vite-plugin-rest-api";
+import { pluginAPIRoutes } from "vite-plugin-api-routes";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     solid(),
-    pluginRestAPI({
+    pluginAPIRoutes({
       // Configuration options go here
     }),
   ],

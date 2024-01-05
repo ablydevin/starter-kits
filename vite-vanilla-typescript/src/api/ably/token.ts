@@ -1,7 +1,7 @@
 import Ably from "ably/promises";
-import { Request, Response } from 'express';
+import { Response } from 'express';
 
-export const GET = async (req:Request, res:Response) => {
+export const GET = async (res:Response) => {
 
  // Your application should perform some type of user 
  // authorization to validate that the user is allowed 

@@ -2,6 +2,8 @@
 
 This repository contains Ably Starter Kit applications for common programming languages and frameworks.  The Starter Kits demonstrate how to create a new Ably client, authenticating the client by using a token generation API endpoint.
 
+Vite-based projects use the [vite-plugin-api-routes](https://github.com/yracnet/vite-plugin-api-routes) plugin to create an api route for the Vite development server.
+
 ## Starter Kits
 
 - [x] Next.js (JavaScript)

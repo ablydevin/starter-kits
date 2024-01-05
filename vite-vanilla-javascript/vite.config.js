@@ -1,9 +1,9 @@
 import { defineConfig } from "vite";
-import { pluginRestAPI } from "vite-plugin-rest-api";
+import { pluginAPIRoutes } from "vite-plugin-api-routes";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    pluginRestAPI({
+    pluginAPIRoutes({
       // Configuration options go here
       dirs: [ { dir: 'api', route: '', exclude: []} ]
     }),

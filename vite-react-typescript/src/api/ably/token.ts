@@ -1,7 +1,9 @@
 import Ably from "ably/promises";
-import { Request, Response } from 'express';
+import { Response } from 'express';
 
-export const GET = async (req:Request, res:Response) => {
+type TypedResponse<T> = Omit<Response, 'json' | 'status'> & { json(data: T) : TypedResponse<T> } & { status(code: number): TypedResponse <T> };
+
+export const GET = async (res:TypedResponse<Ably.Types.TokenRequest>) => {
 
  // Your application should perform some type of user 
  // authorization to validate that the user is allowed 

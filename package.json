@@ -1,0 +1,18 @@
+{
+  "name": "starter-kits",
+   "version": "1.0.0",
+  "description": "This repository contains Ably Starter Kit applications for common programming languages and frameworks.  The Starter Kits demonstrate how to create a new Ably client, authenticating the client by using a token generation API endpoint.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "loop \"npx rimraf node_modules\"",
+    "install": "loop \"npm install\"",
+    "build": "loop \"npm run build\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "loop": "^3.3.6",
+    "rimraf": "^5.0.5"
+  }
+}
