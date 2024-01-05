@@ -7,10 +7,15 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "test": "vitest run",
     "astro": "astro"
   },
   "dependencies": {
     "ably": "^1.2.48",
     "astro": "^4.0.5"
+  },
+  "devDependencies": {
+    "node-mocks-http": "^1.14.1",
+    "vitest": "^1.1.3"
   }
 }

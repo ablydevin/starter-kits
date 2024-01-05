@@ -1,7 +1,6 @@
 import express from "express";
-import { Request, Response } from "express";
 import { ProxyOptions, ViteDevServer, defineConfig, loadEnv } from "vite";
-import Ably from "ably/promises";
+import requestToken from "./requestToken";
 
 const app = express();
 
@@ -10,18 +9,7 @@ export default defineConfig(({command, mode}) => {
 
   process.env = {...process.env, ...loadEnv(mode, process.cwd())};
 
-  app.get("/api/ably/token", async (req: Request, res: Response) => {
-    const clientId = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-
-    console.log(`Key: ${process.env.VITE_ABLY_API_KEY}`);
-
-    const client = new Ably.Rest.Promise(process.env.VITE_ABLY_API_KEY);
-    const tokenRequestData = await client.auth.createTokenRequest({
-      clientId: clientId,
-    });
-    console.log(`Request: ${JSON.stringify(tokenRequestData)}`);
-    return res.json(tokenRequestData);
-  });
+  app.get("/api/ably/token", requestToken);
 
   return { plugins: [
     expressPlugin()] 

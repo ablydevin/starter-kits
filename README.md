@@ -8,7 +8,7 @@ Vite-based projects use the [vite-plugin-api-routes](https://github.com/yracnet/
 
 - [x] Next.js (JavaScript)
 - [x] Next.js (TypeScript)
-- [ ] Nuxt (JavaScript)
+- [x] Nuxt (JavaScript)
 - [x] React (Vite, JavaScript)
 - [x] React (Vite, TypeScript)
 - [x] Solid (Vite, JavaScript)

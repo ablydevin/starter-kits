@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "test": "vitest run",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -15,7 +16,9 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
+    "node-mocks-http": "^1.14.1",
     "vite": "^4.4.5",
-    "vite-plugin-api-routes": "^1.1.0-beta"
+    "vite-plugin-api-routes": "^1.1.0-beta",
+    "vitest": "^1.1.3"
   }
 }
