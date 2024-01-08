@@ -1,13 +1,13 @@
 import Ably from "ably/promises";
-import { Response } from 'express';
+import { Request, Response } from 'express';
 
-export const GET = async (res:Response) => {
+export const GET = async (_req:Request, res:Response) => {
 
  // Your application should perform some type of user 
  // authorization to validate that the user is allowed 
  // to receive a token before fulfilling the token request 
  // if (requesting_user.isAuthenticated) {
-
+    
     const clientId = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 
     const client = new Ably.Rest(import.meta.env.VITE_ABLY_API_KEY);

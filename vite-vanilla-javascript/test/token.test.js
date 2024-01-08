@@ -1,11 +1,12 @@
 import { expect, test } from "vitest";
 import httpMocks from "node-mocks-http";
-import { GET } from "./token";
+import { GET } from "../api/ably/token";
 
 test("return Ably token request", async () => {
-  const mockExpressResponse = httpMocks.createResponse();
   
-  await GET(null, mockExpressResponse);
+  const mockExpressRequest = httpMocks.createRequest();
+  const mockExpressResponse = httpMocks.createResponse();
+  await GET(mockExpressRequest, mockExpressResponse, null);
   expect(mockExpressResponse.statusCode).toBe(200);
 
   const headers = mockExpressResponse._getHeaders(); 
